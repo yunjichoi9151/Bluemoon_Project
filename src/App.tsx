@@ -1,25 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Lottie from 'react-lottie';
+import animationData from './Animation/space_developer.json';
 
 function App() {
+  const options = (lottiefile: any) => {
+    return {
+      loop: true,
+      autoplay: true,
+      animationData: lottiefile,
+      rendererSettings: {
+        preserveAspectRatio: 'xMidYMid slice',
+      },
+    };
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Lottie options={options(animationData)} width={500} height={500} />
+    </>
   );
 }
 
