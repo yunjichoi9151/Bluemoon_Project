@@ -18,7 +18,7 @@ export default {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|svg|jpg|gif|woff|woff2|eot|ttf|otf)$/,
+        test: /\.(png|svg|jpg|gif|woff|woff2|webp|webm|eot|ttf|otf|pdf)$/,
         use: ['file-loader'],
       },
     ],
