@@ -1,3 +1,7 @@
 # Bluemoon Project
 
-Bluemoon Project입니다.
+### 사용 기술 스택
+
+- React
+
+- TypeScript

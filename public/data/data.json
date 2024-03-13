@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "bgcolor": "#F54748",
+    "title": "또잉",
+    "desc": "Detail"
+  },
+  {
+    "id": 2,
+    "bgcolor": "#7952B3",
+    "title": "LILAC",
+    "desc": "Detail"
+  },
+  {
+    "id": 3,
+    "bgcolor": "#1597BB",
+    "title": "promiSpot",
+    "desc": "Detail"
+  },
+  {
+    "id": 4,
+    "bgcolor": "#185ADB",
+    "title": "White Rabbit",
+    "desc": "Detail"
+  }
+]
