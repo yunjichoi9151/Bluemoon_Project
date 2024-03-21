@@ -13,17 +13,23 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@tsparticles/react": "^3.0.0",
     "@types/react-responsive": "^8.0.8",
     "@types/styled-components": "^5.1.26",
     "file-saver": "^2.0.5",
     "loader-utils": "^3.2.1",
     "lottie-react": "^2.4.0",
     "react": "^18.2.0",
+    "react-animate-on-scroll": "^2.1.7",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-responsive": "^9.0.2",
     "react-router-dom": "^6.15.0",
-    "styled-components": "^6.0.7"
+    "react-router-hash-link": "^2.4.3",
+    "react-tsparticles": "^1.42.2",
+    "styled-components": "^6.0.7",
+    "tsparticles": "^3.3.0",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@babel/core": "^7.24.0",
@@ -31,6 +37,7 @@
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
     "@types/react": "^18.2.20",
+    "@types/react-animate-on-scroll": "^2.1.8",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
