@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as CS from '../../../styles/CommonStyle';
 
 interface TextButtonProps {
   size?: string;
@@ -8,11 +7,10 @@ interface TextButtonProps {
   border?: string;
 }
 
-export const TextButton = styled.div<TextButtonProps>`
+export const TextButton = styled.button<TextButtonProps>`
   border: ${(props) => props.border || 'none'};
   border-radius: ${(props) => props.radius || '30px'};
-  background: ${(props) =>
-    props.color ? props.color : CS.gradient.purpleBlue};
+  background: ${(props) => (props.color ? props.color : 'var(--purpleBlue)')};
   width: ${(props) => props.size || '175px'};
   box-shadow: 0px 10px 20px rgba(8, 12, 33, 0.15);
   padding: 8px 0px 8px 0px;

@@ -1,6 +1,5 @@
 import BasicText from '../BasicText';
 import * as S from './style';
-import * as CS from '../../../styles/CommonStyle';
 import GitHub from '../../../assets/img/GitHub.png';
 import Instagram from '../../../assets/img/Instagram.png';
 import Tistory from '../../../assets/img/Tistory.png';
@@ -14,7 +13,7 @@ const Footer = () => {
           src={GitHub}
           size='50px'
           imgSize='45px'
-          color={CS.color.white}
+          color='var(--white)'
           handleOnClickButton={() =>
             window.open('https://github.com/yunjichoi9151', '_blank')
           }
@@ -34,7 +33,10 @@ const Footer = () => {
           }
         />
       </S.BtnWrap>
-      <BasicText text='© 2024. Choi Yun Ji. All rights reserved.' />
+      <BasicText
+        text='© 2024. Choi Yun Ji. All rights reserved.'
+        fontStyle='--font-paragraph-medium'
+      />
     </S.Footer>
   );
 };

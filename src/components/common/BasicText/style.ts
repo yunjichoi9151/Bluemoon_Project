@@ -1,15 +1,15 @@
 import styled from 'styled-components';
-import * as CS from '../../../styles/CommonStyle';
 
 interface TextProps {
+  font?: string;
   fontStyle?: string;
   color?: string;
 }
 
 export const Text = styled.div<TextProps>`
-  color: ${(props) => props.color || CS.color.white};
+  color: ${(props) => props.color || `var(--white)`};
   font: ${(props) =>
-    props.fontStyle ? CS.font[props.fontStyle] : CS.font.paragraphMedium};
+    props.fontStyle ? `var(${props.fontStyle}) ${props.font}` : 'inherit'};
   padding: auto;
   display: flex;
   align-items: center;

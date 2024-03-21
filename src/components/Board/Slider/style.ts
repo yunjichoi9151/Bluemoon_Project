@@ -4,6 +4,12 @@ interface SlideProps {
   bgcolor?: string;
 }
 
+export const AllWrap = styled.div`
+  display: flex;
+  align-items: center;
+  width: calc(var(--vw, 1vw) * 100);
+`;
+
 export const SlideC = styled.div`
   position: relative;
   perspective: 1500px;
