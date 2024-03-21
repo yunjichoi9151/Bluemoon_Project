@@ -3,6 +3,7 @@ import * as S from './style';
 
 interface TextButtonProps {
   text: string;
+  font?: string;
   fontStyle?: string;
   fontColor?: string;
   size?: string;
@@ -14,6 +15,7 @@ interface TextButtonProps {
 
 const TextButton = ({
   text,
+  font,
   fontStyle,
   fontColor,
   size,
@@ -30,7 +32,12 @@ const TextButton = ({
       color={color}
       onClick={handleOnClickButton}
     >
-      <BasicText text={text} fontStyle={fontStyle} color={fontColor} />
+      <BasicText
+        text={text}
+        font={font}
+        fontStyle={fontStyle}
+        color={fontColor}
+      />
     </S.TextButton>
   );
 };

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Footer = styled.div`
   position: relative;
-  transform: translateY(-100%);
+  /* transform: translateY(-100%); */
   background-color: #222;
   padding: auto;
   display: flex;

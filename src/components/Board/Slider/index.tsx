@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as S from './style';
 import IconButton from '../../common/IconButton';
-import { IoPlayBack, IoPlayForward } from 'react-icons/io5';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 
 interface SliderProps {
   data: {
@@ -54,7 +54,14 @@ const Slider = ({ data, activeSlide }: SliderProps) => {
   const prev = () => setActiveIndex(prevIndex);
 
   return (
-    <>
+    <S.AllWrap>
+      <IconButton
+        handleOnClickButton={prev}
+        color='rgba(0, 0, 0, 0)'
+        size='5rem'
+      >
+        <FaChevronLeft color='white' />
+      </IconButton>
       <S.SlideC>
         {data.map((item, i) => (
           <React.Fragment key={item.id}>
@@ -78,16 +85,14 @@ const Slider = ({ data, activeSlide }: SliderProps) => {
           </React.Fragment>
         ))}
       </S.SlideC>
-
-      <S.Btns>
-        <IconButton handleOnClickButton={prev}>
-          <IoPlayBack />
-        </IconButton>
-        <IconButton handleOnClickButton={next}>
-          <IoPlayForward />
-        </IconButton>
-      </S.Btns>
-    </>
+      <IconButton
+        handleOnClickButton={next}
+        color='rgba(0, 0, 0, 0)'
+        size='5rem'
+      >
+        <FaChevronRight color='white' />
+      </IconButton>
+    </S.AllWrap>
   );
 };
 

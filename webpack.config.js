@@ -1,6 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import path from 'path';
+import TerserPlugin from 'terser-webpack-plugin';
 
 export default {
   entry: './src/index.tsx',
@@ -33,4 +34,16 @@ export default {
     }),
     new CleanWebpackPlugin(),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          compress: {
+            drop_console: true,
+          },
+        },
+      }),
+    ],
+  },
 };

@@ -2,11 +2,10 @@ import styled from 'styled-components';
 
 export const AllWrap = styled.div`
   width: 100%;
-  height: auto;
-  min-height: 100%;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
-  padding-bottom: 200px;
+  /* padding-bottom: 200px; */
   justify-content: center;
   align-items: center;
 `;
@@ -18,8 +17,8 @@ export const TopWrap = styled.div`
 `;
 
 export const MiddleWrap = styled.div`
-  height: calc(var(--vh, 1vh) * 50);
-  margin: 100px;
+  width: 40%;
+  /* margin: 100px; */
 `;
 
 export const BtnWrap = styled.div`
@@ -27,4 +26,12 @@ export const BtnWrap = styled.div`
   display: flex;
   padding: 20px 0px;
   justify-content: space-between;
+`;
+
+export const Text = styled.div`
+  font-family: Gowun Dodum;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
 `;
