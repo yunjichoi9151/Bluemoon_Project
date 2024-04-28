@@ -24,7 +24,7 @@ export const BasicModal = styled.div`
 `;
 
 export const ModalContent = styled.div`
-  background: white;
+  background: #222;
   padding: 20px;
   border-radius: 8px;
   z-index: 1001;

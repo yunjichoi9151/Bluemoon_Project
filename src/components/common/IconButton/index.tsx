@@ -5,6 +5,7 @@ interface IconButtonProps {
   border?: string;
   radius?: string;
   color?: string;
+  style?: any;
   children: React.ReactNode;
   handleOnClickButton?: () => void;
 }
@@ -14,6 +15,7 @@ const IconButton = ({
   border,
   radius,
   color,
+  style,
   children,
   handleOnClickButton,
 }: IconButtonProps) => {
@@ -23,6 +25,7 @@ const IconButton = ({
       border={border}
       radius={radius}
       color={color}
+      style={style}
       onClick={handleOnClickButton}
     >
       {children}

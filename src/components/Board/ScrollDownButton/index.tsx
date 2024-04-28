@@ -39,12 +39,14 @@ const ScrollDownButton = () => {
   }, []);
 
   return (
-    <S.ScrollDownButton
-      onClick={handleScrollDown}
-      style={{ display: isEndOfPage ? 'none' : 'block' }}
-    >
-      {View}
-    </S.ScrollDownButton>
+    <S.BtnWrap>
+      <S.ScrollDownButton
+        onClick={handleScrollDown}
+        style={{ display: isEndOfPage ? 'none' : 'block' }}
+      >
+        {View}
+      </S.ScrollDownButton>
+    </S.BtnWrap>
   );
 };
 

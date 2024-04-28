@@ -1,47 +1,19 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
 export const Container = styled.header`
   display: flex;
-  justify-content: space-between;
+  width: calc(var(--vw, 1vw) * 100);
+  height: 4.5rem;
+  justify-content: center;
   align-items: center;
-  padding: 1rem 5rem;
-
-  background-color: #21212150;
-
-  backdrop-filter: blur(6px);
-
+  background-color: #1b1a2ea9;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
+  top: 0rem;
+  transition: all 0.3s ease-out 0s;
+  padding: 0.5rem 4rem;
   z-index: 1000;
-
-  nav {
-    display: flex;
-    align-items: center;
-    gap: 1.8rem;
-    a {
-      color: #ffff;
-      padding: 0.6rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      transition: filter 0.25s;
-
-      &.button {
-        padding: 0.6rem 2rem;
-      }
-
-      &:hover {
-        filter: brightness(0.6);
-      }
-    }
-  }
-
-  .menu-container {
-    cursor: pointer;
-    padding: 0.6rem 0;
-  }
 
   .menu {
     width: 2rem;
@@ -85,64 +57,7 @@ export const Container = styled.header`
     transition: 0.6s;
   }
 
-  input[type='checkbox'] {
-    height: 0;
-    width: 0;
-    visibility: hidden;
-    outline: none;
-  }
-
-  label {
-    cursor: pointer;
-    text-indent: -9999px;
-    width: 55px;
-    height: 30px;
-    background: var(--green);
-    display: block;
-    justify-content: center;
-    align-items: center;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    border-radius: 100px;
-    position: relative;
-    margin-left: auto;
-    right: 10px;
-  }
-
-  @media only screen and (max-width: 800px) {
-    label {
-      position: relative;
-    }
-  }
-
-  label:after {
-    content: '';
-    background: #fff;
-    width: 20px;
-    height: 20px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    position: absolute;
-    top: 5px;
-    left: 4px;
-    transition: cubic-bezier(0.68, -0.55, 0.27, 01.55) 320ms;
-  }
-
-  input:checked + label {
-    background: var(--pink);
-  }
-
-  input:checked + label:after {
-    left: calc(100% - 5px);
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-
-  @media (max-width: 960px) {
+  @media (max-width: 767px) {
     padding: 1.5rem 3rem;
 
     .menu {
@@ -159,13 +74,16 @@ export const Container = styled.header`
       justify-content: center;
       align-items: center;
       position: fixed;
-      width: 100vw;
-      height: 50vh;
+      width: calc(var(--vw, 1vw) * 100);
+      height: calc(var(--vh, 1vh) * 25);
       background: var(--white);
       top: 0;
       left: 0;
-      transition: opacity 0.25s;
-      background-color: var(--black);
+      transition:
+        opacity 0.25s,
+        transform 0.25s ease-in-out;
+      transform: translateY(-80%);
+      background: #1b1a2ef3;
 
       a.button {
         background-color: var(--pink);
@@ -174,16 +92,136 @@ export const Container = styled.header`
       &.active {
         opacity: 1;
         visibility: visible;
+        transform: translateY(0);
       }
     }
   }
 `;
 
-export const Logo = styled(HashLink)`
+export const BarWrap = styled.div`
+  display: flex;
+  height: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 80rem;
+`;
+
+export const Logo = styled(Link)`
+  font: var(--font-label-large) Raleway;
+  display: flex;
+  color: white;
   text-decoration: none;
-  color: #fff;
-  font: var(--font-heading-xl);
+  align-items: center;
+  cursor: pointer;
+`;
+
+export const MenuNav = styled.nav`
+  display: flex;
+`;
+
+export const Menu = styled(HashLink)`
+  font: var(--font-paragraph-intermediate) Raleway;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0.5rem 1rem;
+  margin: 0rem 0.25rem;
+  border-radius: 1rem;
+  position: relative;
+
+  &:hover {
+    filter: brightness(0.6);
+  }
+  span {
+    display: flex;
+  }
+
+  @media screen and (max-width: 1023px) {
+    font: var(--font-paragraph-medium) Raleway;
+  }
+  /* &:hover {
+    background: transparent;
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    background: #c797eb;
+    transition: all 0.3s ease;
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+  }
+
+  &:after {
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+  }
+
+  &:hover:before {
+    height: 100%;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+  span {
+    display: flex;
+    &:hover {
+      background: transparent;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      background: #c797eb;
+      transition: all 0.3s ease;
+    }
+
+    &:before {
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+    }
+
+    &:after {
+      bottom: 0;
+      right: 0;
+      width: 2px;
+      height: 0;
+    }
+
+    &:hover:before {
+      width: 100%;
+    }
+
+    &:hover:after {
+      height: 100%;
+    }
+  } */
+`;
+
+export const MenuIcon = styled.div`
+  color: var(--white);
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+`;
+
+export const MenuText = styled.div`
+  padding-left: 1rem;
+`;
+
+export const LogoImg = styled.img`
+  width: 2.5rem;
 `;

@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@tsparticles/react": "^3.0.0",
     "@types/react-responsive": "^8.0.8",
     "@types/styled-components": "^5.1.26",

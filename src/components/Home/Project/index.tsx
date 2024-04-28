@@ -7,15 +7,8 @@ const Project = () => {
   return (
     <>
       <S.AllWrap id='project'>
-        <S.TopWrap>
-          <BasicText
-            text='PROJECT'
-            color='white'
-            font='Raleway'
-            fontStyle='--font-heading-xxxl'
-          />
-        </S.TopWrap>
         <S.MiddleWrap>
+          <S.TopWrap>Project</S.TopWrap>
           <Slider data={data} activeSlide={1} />
         </S.MiddleWrap>
       </S.AllWrap>

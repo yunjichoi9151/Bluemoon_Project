@@ -1,55 +1,75 @@
-import React, { useState } from 'react';
-import { NavHashLink } from 'react-router-hash-link';
 import * as S from './style';
-import BasicText from '../BasicText';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router';
+import { HashLink } from 'react-router-hash-link';
+import logo from '../../../assets/img/CYJ_logo_new.png';
+import { AiOutlineHome } from 'react-icons/ai';
+import { IoBookOutline } from 'react-icons/io5';
+import { MdOutlinePersonSearch } from 'react-icons/md';
+import { AiOutlineFundProjectionScreen } from 'react-icons/ai';
 
 const NavBar = () => {
+  const location = useLocation();
+
+  const [isHome, setIsHome] = useState(false);
   const [isActive, setActive] = useState(false);
 
-  function toggleTheme() {
-    const html = document.getElementsByTagName('html')[0];
-    html.classList.toggle('light');
-  }
+  const handleLogoClick = (event) => {
+    if (isHome) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
-  function closeMenu() {
+  const closeMenu = () => {
     setActive(false);
-  }
+  };
+
+  useEffect(() => {
+    setIsHome(location.pathname === '/');
+  }, [location.pathname]);
 
   return (
-    <S.Container className='header-fixed'>
-      <S.Logo smooth to='#home'>
-        <span>{"CYJ's Portfolio"}</span>
-      </S.Logo>
-      <nav className={isActive ? 'active' : ''}>
-        <NavHashLink smooth to='#title' onClick={closeMenu}>
-          <BasicText
-            text='HOME'
-            font='Raleway'
-            fontStyle='--font-paragraph-medium'
-          />
-        </NavHashLink>
-        <NavHashLink smooth to='#about' onClick={closeMenu}>
-          <BasicText
-            text='ABOUT ME'
-            font='Raleway'
-            fontStyle='--font-paragraph-medium'
-          />
-        </NavHashLink>
-        <NavHashLink smooth to='#project' onClick={closeMenu}>
-          <BasicText
-            text='SKILLS'
-            font='Raleway'
-            fontStyle='--font-paragraph-medium'
-          />
-        </NavHashLink>
-        <NavHashLink smooth to='#project' onClick={closeMenu}>
-          <BasicText
-            text='PROJECT'
-            font='Raleway'
-            fontStyle='--font-paragraph-medium'
-          />
-        </NavHashLink>
-      </nav>
+    <S.Container>
+      <S.BarWrap>
+        <S.Logo to='/' onClick={handleLogoClick}>
+          <S.LogoImg src={logo} />
+        </S.Logo>
+        <S.MenuNav className={isActive ? 'active' : ''}>
+          <S.Menu smooth to='#home' onClick={closeMenu}>
+            <span>
+              <S.MenuIcon>
+                <AiOutlineHome />
+              </S.MenuIcon>
+              <S.MenuText>Home</S.MenuText>
+            </span>
+          </S.Menu>
+          <S.Menu smooth to='#about' onClick={closeMenu}>
+            <span>
+              <S.MenuIcon>
+                <MdOutlinePersonSearch />
+              </S.MenuIcon>
+              <S.MenuText>About</S.MenuText>
+            </span>
+          </S.Menu>
+          <S.Menu smooth to='#skills' onClick={closeMenu}>
+            <span>
+              <S.MenuIcon>
+                <IoBookOutline />
+              </S.MenuIcon>
+              <S.MenuText>Skills</S.MenuText>
+            </span>
+          </S.Menu>
+          <S.Menu smooth to='#project' onClick={closeMenu}>
+            <span>
+              <S.MenuIcon>
+                <AiOutlineFundProjectionScreen />
+              </S.MenuIcon>
+              <S.MenuText>Project</S.MenuText>
+            </span>
+          </S.Menu>
+        </S.MenuNav>
+      </S.BarWrap>
       <div
         aria-expanded={isActive ? 'true' : 'false'}
         aria-haspopup='true'
