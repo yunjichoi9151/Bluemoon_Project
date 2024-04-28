@@ -9,3 +9,10 @@ export const ScrollDownButton = styled.button`
   background-color: transparent;
   border: none;
 `;
+
+export const BtnWrap = styled.div`
+  width: calc(var(--vw, 1vw) * 100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
