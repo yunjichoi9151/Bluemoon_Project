@@ -14,7 +14,7 @@ export const IconButton = styled.div<IconButtonProps>`
   width: ${(props) => props.size || '1.5rem'};
   height: ${(props) => props.size || '1.5rem'};
   padding: 8px 0px 8px 0px;
-  backdrop-filter: blur(12px);
+  /* backdrop-filter: blur(12px); */
   padding: auto;
   display: flex;
   align-items: center;

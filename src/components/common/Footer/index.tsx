@@ -12,8 +12,6 @@ const Footer = () => {
         <ImgButton
           src={GitHub}
           size='50px'
-          imgSize='45px'
-          color='var(--white)'
           handleOnClickButton={() =>
             window.open('https://github.com/yunjichoi9151', '_blank')
           }

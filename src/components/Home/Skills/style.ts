@@ -5,13 +5,11 @@ export const AllWrap = styled.div`
   height: calc(var(--vh, 1vh) * 100);
   padding: 5rem 3rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 `;
 
 export const MiddleContent = styled.div`
   z-index: 999;
-  margin: auto;
-  padding: 2rem;
   /* width: 100%; */
   @media screen and (max-width: 87.5rem) {
     max-width: 82.5rem;
@@ -33,7 +31,7 @@ export const MiddleContent = styled.div`
 export const TopWrap = styled.div`
   /* height: 50px; */
   /* margin-top: 8rem; */
-  padding: 1rem 0rem;
+  padding: 3rem 0rem;
   font: var(--font-heading-xxl) Raleway;
   color: white;
   text-align: center;
@@ -58,9 +56,6 @@ export const Avatar = styled.video`
   width: 25rem;
   height: 25rem;
   z-index: 999;
-  @media screen and (max-width: 1170px) {
-    display: none;
-  }
   /* margin-left: -5rem; */
   /* margin-top: 2rem; */
 `;
@@ -70,91 +65,82 @@ export const Content = styled.div`
   /* padding: 0rem 10rem; */
   font: var(--font-paragraph-intermediate) Gowun Dodum;
   color: white;
-  /* height: calc(var(--vh, 1vh) * 70); */
 `;
 
 export const OneLine = styled.div`
   display: flex;
 `;
 
-export const ContentP = styled.p`
-  padding: 0.5rem 0rem;
-`;
-
-export const ContentSpan = styled.span`
-  color: #ffb700d8;
-  font: var(--font-label-intermediate) Gowun Dodum;
-`;
-
-export const Circle3 = styled.img`
-  width: 75rem;
-  position: absolute;
-  transform: scaleX(-1);
-  left: -30rem;
-  opacity: 50%;
-
+export const SkillsWrap = styled.div`
+  width: 100%;
+  max-width: 75rem;
+  height: calc(var(--vh, 1vh) * 65);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   @media screen and (max-width: 1023px) {
-    width: 72.5rem;
-    padding-top: 5rem;
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 70rem;
-    padding-top: 10rem;
+    /* width: 70rem; */
   }
 `;
 
-export const IntroAllWrap = styled.div`
+export const IconWrap = styled.div`
+  color: var(--purpleBlue);
+  width: 3rem;
+  height: 3rem;
+`;
+
+export const OneSkill = styled.div`
+  font-size: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  opacity: 0.93;
+  border: 0.1rem solid rgba(137, 154, 230, 0.637);
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 1170px) {
-    flex-direction: row;
-  }
-`;
-
-export const IntroWrap = styled.div`
-  width: 100%;
-  display: flex;
-  @media screen and (max-width: 1170px) {
-    flex-direction: column;
-    margin: 0.5rem;
-  }
-`;
-
-export const OneIntroWrap = styled.div`
-  width: 100%;
-  display: flex;
-  height: 6rem;
-  background-color: rgba(143, 194, 255, 0.25);
-  margin: 1rem 1rem 0rem 1rem;
-  border-radius: 1rem;
+  box-shadow: 0.25rem 0.3rem 0.25rem 0.2rem rgba(89, 4, 168, 0.137);
+  overflow: hidden;
+  transition: all 0.4s ease 0s;
+  flex: 0 0 auto;
+  width: 10rem;
+  height: 9rem;
   align-items: center;
-  &:hover {
-    filter: brightness(0.9);
-  }
-  @media screen and (max-width: 1170px) {
-    margin: 0.5rem;
-  }
-`;
-
-export const IntroIcon = styled.div`
-  /* width: 5rem; */
-  /* height: 5rem; */
   justify-content: center;
+
+  @media (max-width: 81rem) {
+    margin: 0.5rem;
+    width: 9rem;
+    height: 8.5rem;
+  }
+
+  @media (max-width: 70rem) {
+    margin: 0.5rem;
+    width: 7rem;
+    height: 6.5rem;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    overflow: hidden;
+  }
+`;
+
+export const IconText = styled.div`
+  font: var(--font-paragraph-medium) Raleway;
+  color: white;
+  display: flex;
+  padding-top: 0.5rem;
   align-items: center;
-  padding: 1rem 1.5rem;
+  justify-content: center;
+  @media (max-width: 767px) {
+    font: var(--font-paragraph-small) Raleway;
+  }
 `;
 
-export const IntroTextWrap = styled.div`
-  color: white;
-`;
-
-export const IntroCategory = styled.div`
-  font: var(--font-label-intermediate) Raleway;
-  color: white;
-`;
-
-export const IntroContent = styled.div`
-  font: var(--font-label-medium) Raleway;
-  cursor: pointer;
+export const Circle4 = styled.img`
+  width: 75rem;
+  position: absolute;
+  opacity: 50%;
 `;

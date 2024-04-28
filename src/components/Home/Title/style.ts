@@ -4,21 +4,13 @@ export const AllWrap = styled.div`
   width: 100%;
   height: calc(var(--vh, 1vh) * 100);
   display: flex;
-  flex-direction: column;
   align-items: center;
-`;
-
-export const MiddleWrap = styled.div`
-  padding: 0 calc(var(--vw, 1vw) * 20);
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: calc(var(--vh, 1vh) * 100);
-  justify-content: space-between;
-  @media (max-width: 960px) {
-    margin: 6rem 0rem;
+  justify-content: center;
+  padding-top: 5rem;
+  @media screen and (max-width: 768px) {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    max-height: calc(var(--vh, 1vh) * 90);
   }
 `;
 
@@ -29,10 +21,16 @@ export const MTWrap = styled.div`
 
 export const TextWrap = styled.div`
   padding-top: 0.25rem;
+  color: white;
+`;
+
+export const TitleText = styled.div`
+  color: var(--white);
+  font: var(--font-heading-xxxl) 'Raleway';
 `;
 
 export const ContentWrap = styled.div`
-  height: calc(var(--vh, 1vh) * 25);
+  /* height: calc(var(--vh, 1vh) * 25); */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -40,22 +38,35 @@ export const ContentWrap = styled.div`
 
 export const MiddleContent = styled.div`
   /* width: 100%; */
+  margin-right: calc(var(--vw, 1vw) * 10);
+  z-index: 999;
+  @media screen and (max-width: 768px) {
+    margin-right: 0;
+  }
 `;
 
 export const BtnWrap = styled.div`
   width: 22.5rem;
   display: flex;
-  padding: 2rem 0px;
+  padding: 2rem 0rem;
   justify-content: space-between;
   align-self: flex-end;
+  @media (max-width: 768px) {
+    padding: 2rem 0rem 0rem 0rem;
+  }
 `;
 
 export const SpaceContent = styled.div`
   padding-bottom: 5rem;
   width: 25rem;
   z-index: 999;
-  @media (max-width: 960px) {
-    width: 23rem;
+  @media (max-width: 1023px) {
+    width: 22.5rem;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: center;
+    max-width: 20rem;
   }
 `;
 
@@ -92,4 +103,43 @@ export const WaveEmoji = styled.span`
       transform: rotate(0deg);
     }
   }
+`;
+
+export const Circle1 = styled.img`
+  width: 20rem;
+  position: absolute;
+  top: 5rem;
+  left: 0rem;
+  opacity: 75%;
+
+  @media screen and (max-width: 1023px) {
+    width: 15rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 10rem;
+  }
+`;
+
+export const Circle2 = styled.img`
+  width: 62.5rem;
+  position: absolute;
+  bottom: 2.5rem;
+  right: -10rem;
+  opacity: 50%;
+
+  @media screen and (max-width: 1023px) {
+    width: 57.5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 52.5rem;
+  }
+`;
+
+export const ContactBtnWrap = styled.div`
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  padding: 2rem 0rem;
 `;
