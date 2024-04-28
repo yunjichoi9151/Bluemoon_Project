@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const AllWrap = styled.div`
   width: 100%;
-  height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  /* height: calc(var(--vh, 1vh) * 100); */
   display: flex;
   flex-direction: column;
   /* padding-bottom: 200px; */
