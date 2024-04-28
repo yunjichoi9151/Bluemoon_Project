@@ -9,6 +9,13 @@ import BasicModal from '../../common/BasicModal';
 import { useLottie } from 'lottie-react';
 import spaceDeveloper from '../../../..//public/Animation/space_developer.json';
 import Type from '../../common/TypeWriter';
+import Circle1 from '../../../assets/img/circle1.png';
+import Circle2 from '../../../assets/img/circle2.png';
+import Email from '../../common/Email';
+import ImgButton from '../../common/ImgButton';
+import GitHub from '../../../assets/img/GitHub.png';
+import Instagram from '../../../assets/img/Instagram.png';
+import Tistory from '../../../assets/img/Tistory.png';
 
 const Title = () => {
   const options = {
@@ -27,55 +34,69 @@ const Title = () => {
   };
   return (
     <>
-      <S.AllWrap id='title'>
-        {/* <S.TopWrap> */}
-        {/* <BasicText text='Front-end Developer' color='white' font='Raleway' /> */}
-        {/* <BasicLine width='100%' border='1px solid white' /> */}
-        {/* </S.TopWrap> */}
-        <S.MiddleWrap>
-          <S.MiddleContent>
-            <S.ContentWrap>
-              <S.MTWrap>
-                <S.TextWrap>
-                  <BasicText text='Hello World!' color='white' font='Raleway' />
-                </S.TextWrap>
-                <S.WaveEmoji role='img' aria-labelledby='wave'>
-                  👋🏻
-                </S.WaveEmoji>
-              </S.MTWrap>
-              <BasicText
-                text="I'm Yunji Choi"
-                color='white'
-                font='Raleway'
-                fontStyle='--font-heading-xxxl'
-              />
-              <Type strings={['Front-End Developer', 'Junior Developer']} />
-            </S.ContentWrap>
-            <S.BtnWrap>
-              <TextButton
-                text='Contact me'
-                color='grey'
-                handleOnClickButton={setModal}
-                fontStyle='--font-label-medium'
-                font='Raleway'
-              />
-              <TextButton
-                text='Download CV'
-                handleOnClickButton={handleDownPDF}
-                fontStyle='--font-label-medium'
-                font='Raleway'
-              />
-            </S.BtnWrap>
-          </S.MiddleContent>
-          <S.SpaceContent>{View}</S.SpaceContent>
-        </S.MiddleWrap>
+      <S.AllWrap id='home'>
+        <S.MiddleContent>
+          <S.ContentWrap>
+            <S.MTWrap>
+              <S.TextWrap>Hello World!</S.TextWrap>
+              <S.WaveEmoji role='img' aria-labelledby='wave'>
+                👋🏻
+              </S.WaveEmoji>
+            </S.MTWrap>
+            <S.TitleText>I'm Yunji Choi</S.TitleText>
+            <Type strings={['Front-End Developer', 'Junior Developer']} />
+          </S.ContentWrap>
+          <S.BtnWrap>
+            <TextButton
+              text='Contact me'
+              color='grey'
+              handleOnClickButton={setModal}
+              fontStyle='--font-label-medium'
+              font='Raleway'
+              size='10rem'
+            />
+            <TextButton
+              text='Download CV'
+              handleOnClickButton={handleDownPDF}
+              fontStyle='--font-label-medium'
+              font='Raleway'
+              size='12rem'
+            />
+          </S.BtnWrap>
+        </S.MiddleContent>
+        <S.SpaceContent>{View}</S.SpaceContent>
+        <S.Circle1 src={Circle1} />
+        <S.Circle2 src={Circle2} />
         {modalOpen && (
           <BasicModal
             closeModal={setModal}
             children={
-              <>
-                <BasicText text='hello' />
-              </>
+              <S.ContactBtnWrap>
+                <ImgButton
+                  src={GitHub}
+                  size='50px'
+                  handleOnClickButton={() =>
+                    window.open('https://github.com/yunjichoi9151', '_blank')
+                  }
+                />
+                <ImgButton
+                  src={Instagram}
+                  imgSize='50px'
+                  handleOnClickButton={() =>
+                    window.open(
+                      'https://www.instagram.com/bluemoon_cyj/',
+                      '_blank'
+                    )
+                  }
+                />
+                <ImgButton
+                  src={Tistory}
+                  imgSize='50px'
+                  handleOnClickButton={() =>
+                    window.open('https://bluemoon99.tistory.com/', '_blank')
+                  }
+                />
+              </S.ContactBtnWrap>
             }
           />
         )}
