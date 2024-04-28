@@ -2,23 +2,25 @@ import styled from 'styled-components';
 
 export const AllWrap = styled.div`
   width: 100%;
-  padding: 0 calc(var(--vw, 1vw) * 20);
   height: calc(var(--vh, 1vh) * 100);
+  padding: 5rem 3rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `;
 
 export const TopWrap = styled.div`
-  height: 50px;
-  margin-top: 8rem;
-  /* padding: 0rem 5rem; */
+  padding: 2rem 0rem;
+  font: var(--font-heading-xxl) Raleway;
+  color: white;
+  text-align: center;
 `;
 
 export const MiddleWrap = styled.div`
   height: calc(var(--vh, 1vh) * 50);
-  /* margin: 100px; */
+  padding-bottom: 5rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
