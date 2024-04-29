@@ -121,6 +121,12 @@ export const OneSkill = styled.div`
     height: 6.5rem;
   }
 
+  @media (max-width: 30rem) {
+    margin: 0.5rem;
+    width: 5rem;
+    height: 4.5rem;
+  }
+
   &:hover {
     transform: scale(1.05);
     overflow: hidden;
@@ -137,10 +143,15 @@ export const IconText = styled.div`
   @media (max-width: 767px) {
     font: var(--font-paragraph-small) Raleway;
   }
+
+  @media (max-width: 30rem) {
+    display: none;
+  }
 `;
 
 export const Circle4 = styled.img`
-  width: 75rem;
+  width: calc(var(--vw, 1vw) * 70);
   position: absolute;
   opacity: 50%;
+  overflow: hidden;
 `;
