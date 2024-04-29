@@ -14,6 +14,9 @@ export const TopWrap = styled.div`
   font: var(--font-heading-xxl) Raleway;
   color: white;
   text-align: center;
+  @media screen and (max-width: 500px) {
+    padding-bottom: 5rem;
+  }
 `;
 
 export const MiddleWrap = styled.div`

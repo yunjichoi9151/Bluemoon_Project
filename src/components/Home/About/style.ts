@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const AllWrap = styled.div`
   width: 100%;
   height: calc(var(--vh, 1vh) * 100);
-  padding: 5rem 3rem;
+  padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
 `;
@@ -11,9 +11,12 @@ export const AllWrap = styled.div`
 export const MiddleContent = styled.div`
   z-index: 999;
   margin: auto;
-  padding: 2rem;
+  width: calc(var(--vw, 1vw) * 100 - 4rem);
+  max-width: 70rem;
+  /* padding: calc(var(--vw, 1vw) * 5); */
+  /* max-width: calc(var(--vw, 1vw) * 90); */
   /* width: 100%; */
-  @media screen and (max-width: 87.5rem) {
+  /* @media screen and (max-width: 87.5rem) {
     max-width: 82.5rem;
   }
   @media screen and (max-width: 75rem) {
@@ -27,7 +30,7 @@ export const MiddleContent = styled.div`
   }
   @media screen and (max-width: 36rem) {
     max-width: 33.75rem;
-  }
+  } */
 `;
 
 export const TopWrap = styled.div`
@@ -71,6 +74,12 @@ export const Content = styled.div`
   font: var(--font-paragraph-intermediate) Gowun Dodum;
   color: white;
   /* height: calc(var(--vh, 1vh) * 70); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media screen and (max-width: 500px) {
+    margin-top: 2rem;
+  }
 `;
 
 export const OneLine = styled.div`
@@ -79,11 +88,19 @@ export const OneLine = styled.div`
 
 export const ContentP = styled.p`
   padding: 0.5rem 0rem;
+
+  @media screen and (max-width: 500px) {
+    font: var(--font-paragraph-small) Gowun Dodum;
+  }
 `;
 
 export const ContentSpan = styled.span`
   color: #ffb700d8;
   font: var(--font-label-intermediate) Gowun Dodum;
+
+  @media screen and (max-width: 500px) {
+    font: var(--font-label-small) Gowun Dodum;
+  }
 `;
 
 export const Circle3 = styled.img`
@@ -107,17 +124,22 @@ export const Circle3 = styled.img`
 export const IntroAllWrap = styled.div`
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 1170px) {
+  justify-content: center;
+  @media screen and (max-width: 1024px) {
     flex-direction: row;
+  }
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
   }
 `;
 
 export const IntroWrap = styled.div`
-  width: 100%;
   display: flex;
-  @media screen and (max-width: 1170px) {
+  @media screen and (max-width: 1024px) {
     flex-direction: column;
-    margin: 0.5rem;
+    margin: 0rem 0.5rem;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -125,6 +147,7 @@ export const OneIntroWrap = styled.div`
   width: 100%;
   display: flex;
   height: 6rem;
+  width: 100%;
   background-color: rgba(143, 194, 255, 0.25);
   margin: 1rem 1rem 0rem 1rem;
   border-radius: 1rem;
@@ -135,11 +158,15 @@ export const OneIntroWrap = styled.div`
   @media screen and (max-width: 1170px) {
     margin: 0.5rem;
   }
+  @media screen and (max-width: 500px) {
+    width: 20rem;
+    height: 3rem;
+  }
 `;
 
 export const IntroIcon = styled.div`
-  /* width: 5rem; */
-  /* height: 5rem; */
+  width: 5rem;
+  height: 5rem;
   justify-content: center;
   align-items: center;
   padding: 1rem 1.5rem;
@@ -152,9 +179,15 @@ export const IntroTextWrap = styled.div`
 export const IntroCategory = styled.div`
   font: var(--font-label-intermediate) Raleway;
   color: white;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 export const IntroContent = styled.div`
   font: var(--font-label-medium) Raleway;
   cursor: pointer;
+  @media screen and (max-width: 500px) {
+    font: var(--font-label-small) Raleway;
+  }
 `;
