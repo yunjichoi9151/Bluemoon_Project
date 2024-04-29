@@ -6,6 +6,7 @@ export const AllWrap = styled.div`
   padding: 5rem 3rem;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 `;
 
 export const MiddleContent = styled.div`
