@@ -43,6 +43,10 @@ export const Slide = styled.div<SlideProps>`
   &:hover {
     filter: brightness(1.1);
   }
+  @media screen and (max-width: 500px) {
+    width: calc(var(--vw, 1vw) * 70);
+    height: calc(var(--vw, 1vw) * 65);
+  }
 `;
 
 export const Reflection = styled.div<SlideProps>`
@@ -57,6 +61,9 @@ export const Reflection = styled.div<SlideProps>`
     transform 500ms ease 0s,
     opacity 300ms ease 0s,
     visibility 500ms ease 0s;
+  @media screen and (max-width: 500px) {
+    width: calc(var(--vw, 1vw) * 70);
+  }
 `;
 
 export const SliderContent = styled.div`
@@ -74,6 +81,9 @@ export const SliderContent = styled.div`
 export const SilderImage = styled.img`
   width: 15rem;
   margin-bottom: 2rem;
+  @media screen and (max-width: 500px) {
+    width: calc(var(--vw, 1vw) * 50);
+  }
 `;
 
 export const SliderText = styled.div`
@@ -85,6 +95,9 @@ export const SliderText = styled.div`
   bottom: 0;
   padding: 0.75rem 0rem;
   border-radius: 0rem 0rem 1rem 1rem;
+  @media screen and (max-width: 500px) {
+    width: calc(var(--vw, 1vw) * 70);
+  }
 `;
 
 export const Btns = styled.div`

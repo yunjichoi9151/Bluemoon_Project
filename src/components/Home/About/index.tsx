@@ -26,7 +26,7 @@ const About = () => {
             <S.IntroWrap>
               <S.OneIntroWrap>
                 <S.IntroIcon>
-                  <IoPerson color='white' size='3rem' />
+                  <IoPerson color='white' size='100%' />
                 </S.IntroIcon>
                 <S.IntroTextWrap>
                   <S.IntroCategory>Name</S.IntroCategory>
@@ -35,7 +35,7 @@ const About = () => {
               </S.OneIntroWrap>
               <S.OneIntroWrap>
                 <S.IntroIcon>
-                  <MdEmail color='white' size='3rem' />
+                  <MdEmail color='white' size='100%' />
                 </S.IntroIcon>
                 <S.IntroTextWrap>
                   <S.IntroCategory>Email</S.IntroCategory>
@@ -46,7 +46,7 @@ const About = () => {
               </S.OneIntroWrap>
               <S.OneIntroWrap>
                 <S.IntroIcon>
-                  <FaPhone color='white' size='3rem' />
+                  <FaPhone color='white' size='100%' />
                 </S.IntroIcon>
                 <S.IntroTextWrap>
                   <S.IntroCategory>Phone</S.IntroCategory>
@@ -59,7 +59,7 @@ const About = () => {
             <S.IntroWrap>
               <S.OneIntroWrap>
                 <S.IntroIcon>
-                  <FaGithub color='white' size='3rem' />
+                  <FaGithub color='white' size='100%' />
                 </S.IntroIcon>
                 <S.IntroTextWrap>
                   <S.IntroCategory>GitHub</S.IntroCategory>
@@ -74,7 +74,7 @@ const About = () => {
               </S.OneIntroWrap>
               <S.OneIntroWrap>
                 <S.IntroIcon>
-                  <SiTistory color='white' size='3rem' />
+                  <SiTistory color='white' size='100%' />
                 </S.IntroIcon>
                 <S.IntroTextWrap>
                   <S.IntroCategory>Blog</S.IntroCategory>
@@ -89,7 +89,7 @@ const About = () => {
               </S.OneIntroWrap>
               <S.OneIntroWrap>
                 <S.IntroIcon>
-                  <FaInstagram color='white' size='3rem' />
+                  <FaInstagram color='white' size='100%' />
                 </S.IntroIcon>
                 <S.IntroTextWrap>
                   <S.IntroCategory>Instagram</S.IntroCategory>
