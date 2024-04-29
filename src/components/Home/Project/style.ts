@@ -7,6 +7,7 @@ export const AllWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 `;
 
 export const TopWrap = styled.div`

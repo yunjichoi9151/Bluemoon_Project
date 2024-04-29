@@ -7,6 +7,7 @@ export const AllWrap = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 5rem;
+  overflow: hidden;
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -111,6 +112,7 @@ export const Circle1 = styled.img`
   top: 5rem;
   left: 0rem;
   opacity: 75%;
+  overflow: hidden;
 
   @media screen and (max-width: 1023px) {
     width: 15rem;
@@ -127,13 +129,15 @@ export const Circle2 = styled.img`
   bottom: 2.5rem;
   right: -10rem;
   opacity: 50%;
+  overflow: hidden;
 
   @media screen and (max-width: 1023px) {
     width: 57.5rem;
   }
 
   @media screen and (max-width: 768px) {
-    width: 52.5rem;
+    width: 30rem;
+    right: 0rem;
   }
 `;
 
